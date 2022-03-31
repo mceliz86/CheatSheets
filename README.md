@@ -15,13 +15,13 @@ ___
 
 #### Columns
 
-[Column(“sName”, TypeName = “varchar”)]
-[Required]
-[MaxLength(255)]
-public string Name { get; set; }
+   [Column(“sName”, TypeName = “varchar”)]
+   [Required]
+   [MaxLength(255)]
+   public string Name { get; set; }
 
 #### Primary Keys
 
-[Key]
-[DatabaseGenerated(DatabaseGeneratedOption.None)]
-public class Isbn { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    public class Isbn { get; set; }
