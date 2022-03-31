@@ -248,3 +248,17 @@ To get records in a given page.
     
     context.Courses.Single(c => c.Id == 1);
     context.Courses.SingleOrDefault(c => c.Id == 1);
+    
+### Quantifying
+    bool allInLevel1 = context.Courses.All(c => c.Level == 1);
+    
+    bool anyInLevel1 = context.Courses.Any(c => c.Level == 1);
+
+### Aggregating
+    int count = context.Courses.Count();
+    int count = context.Courses.Count(c => c.Level == 1);
+    
+    var max = context.Courses.Max(c => c.Price);
+    var min = context.Courses.Min(c => c.Price);
+    var avg = context.Courses.Average(c => c.Price);
+    var sum = context.Courses.Sum(c => c.Price);
